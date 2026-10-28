@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use these arrays, please cite them as below."
+title: "Covering array records: six strength-4 covering arrays improving the best known sizes"
+type: dataset
+authors:
+  - family-names: Sitjar
+    given-names: "Théo Nicolas"
+    orcid: "https://orcid.org/0009-0002-6728-0169"
+    affiliation: tns-research
+license: CC-BY-4.0
+repository-code: "https://github.com/tns-research/covering-array-records"
+date-released: "2026-10-28"
+keywords:
+  - covering arrays
+  - combinatorial designs
+  - combinatorial testing
+  - local search
+  - LLM-written search programs
+abstract: "Explicit covering arrays CA(636; 4, 100, 3), CA(644; 4, 105, 3), CA(908; 4, 7, 5), CA(1838; 4, 7, 6), CA(1966; 4, 8, 6) and CA(3942; 4, 12, 6), each improving the best known size in the ca-tools covering array table, obtained by post-optimisation of the published record arrays with C search programs written by Claude Opus, and verified exhaustively."
