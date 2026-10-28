@@ -1,5 +1,7 @@
 # Covering array records (strength 4)
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23741408.svg)](https://doi.org/10.5281/zenodo.23741408)
+
 Six explicit covering arrays that improve the best known sizes in the
 live covering array table
 [chrispbsmolen/ca-tools](https://github.com/chrispbsmolen/ca-tools)
@@ -57,7 +59,7 @@ in `arrays/` are the exact files that were verified.
 
 ## Citation
 
-See `CITATION.cff`. Credit as: T. N. Sitjar (tns-research), 2026.
+T. N. Sitjar (tns-research), *Covering array records: six strength-4 covering arrays improving the best known sizes*, 2026, doi:10.5281/zenodo.23741408. See also `CITATION.cff`.
 
 ## Licence
 
