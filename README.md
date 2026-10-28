@@ -2,21 +2,28 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23741408.svg)](https://doi.org/10.5281/zenodo.23741408)
 
-Six explicit covering arrays that improve the best known sizes in the
+Explicit covering arrays that improve the best known sizes for eight
+parameter sets in the
 live covering array table
 [chrispbsmolen/ca-tools](https://github.com/chrispbsmolen/ca-tools)
-(table checked on 2026-10-28).
+(table checked on 2026-10-28; version 1.1 adds three arrays from the
+same day).
 
 | Parameters | Previous best | Previous construction | New N | File |
 |---|---|---|---|---|
-| CA(N; 4, 100, 3) | 645 | Density Mult Cyclic (Colbourn) | **636** | `arrays/CA_636_4_100_3.txt` |
+| CA(N; 4, 100, 3) | 645 | Density Mult Cyclic (Colbourn) | **633** | `arrays/CA_633_4_100_3.txt` |
 | CA(N; 4, 105, 3) | 657 | Density Mult Cyclic (Colbourn) | **644** | `arrays/CA_644_4_105_3.txt` |
 | CA(N; 4, 7, 5) | 910 | cross-sum (CKRS) | **908** | `arrays/CA_908_4_7_5.txt` |
 | CA(N; 4, 7, 6) | 1844 | orthogonal array, fuse, postop (NCK) | **1838** | `arrays/CA_1838_4_7_6.txt` |
 | CA(N; 4, 8, 6) | 1975 | orthogonal array, fuse, postop (NCK) | **1966** | `arrays/CA_1966_4_8_6.txt` |
 | CA(N; 4, 12, 6) | 3944 | Density (Bryce-Colbourn), postop (NCK) | **3942** | `arrays/CA_3942_4_12_6.txt` |
+| CA(N; 4, 26, 6) | 6456 | Density Cyclic (Colbourn) | **6453** | `arrays/CA_6453_4_26_6.txt` |
+| CA(N; 4, 27, 6) | 6606 | Density Cyclic (Colbourn) | **6581** | `arrays/CA_6581_4_27_6.txt` |
 
-By deleting columns, CA(636; 4, 100, 3) also improves k = 95 to 99
+`arrays/CA_636_4_100_3.txt` (version 1.0) is kept; CA(633; 4, 100, 3)
+was obtained from it by a second search.
+
+By deleting columns, CA(633; 4, 100, 3) also improves k = 95 to 99
 (previous best 637 or 639) and CA(644; 4, 105, 3) improves k = 101 to
 104 (previous best 657).
 
@@ -53,13 +60,16 @@ To rerun a generator:
     gcc -O3 -march=native -std=gnu11 -o gen generators/CA_636_4_100_3.c -lm
     BEST_CANDIDATE=path/to/ca-tools/table/arrays/CA_645_4_100_3.txt ./gen > out.txt
 
+The search for CA(633; 4, 100, 3) started from `arrays/CA_636_4_100_3.txt`
+instead of the table array.
+
 The searches are randomised and time-limited, so a rerun gives a valid
 array of similar size, not necessarily the identical file. The arrays
 in `arrays/` are the exact files that were verified.
 
 ## Citation
 
-T. N. Sitjar (tns-research), *Covering array records: six strength-4 covering arrays improving the best known sizes*, 2026, doi:10.5281/zenodo.23741408. See also `CITATION.cff`.
+T. N. Sitjar (tns-research), *Covering array records: strength-4 covering arrays improving the best known sizes*, 2026, doi:10.5281/zenodo.23741408. See also `CITATION.cff`.
 
 ## Licence
 
