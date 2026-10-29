@@ -10,12 +10,13 @@ authors:
 license: CC-BY-4.0
 doi: "10.5281/zenodo.23741408"
 repository-code: "https://github.com/tns-research/covering-array-records"
-version: "1.1"
-date-released: "2026-10-28"
+version: "1.2"
+date-released: "2026-10-29"
 keywords:
   - covering arrays
   - combinatorial designs
   - combinatorial testing
   - local search
+  - linear codes
   - LLM-written search programs
-abstract: "Explicit covering arrays CA(633; 4, 100, 3), CA(644; 4, 105, 3), CA(908; 4, 7, 5), CA(1838; 4, 7, 6), CA(1966; 4, 8, 6), CA(3942; 4, 12, 6), CA(6453; 4, 26, 6) and CA(6581; 4, 27, 6), each improving the best known size in the ca-tools covering array table, obtained by post-optimisation of the published record arrays with C search programs written by Claude Opus, and verified exhaustively."
+abstract: "Explicit covering arrays CA(633; 4, 100, 3), CA(644; 4, 105, 3), CA(825; 4, 7, 5), CA(1050; 4, 8, 5), CA(1838; 4, 7, 6), CA(1966; 4, 8, 6), CA(3942; 4, 12, 6), CA(6453; 4, 26, 6) and CA(6581; 4, 27, 6), each improving the best known size in the ca-tools covering array table, obtained by unions of cosets of linear codes over GF(5) (k = 7, 8) and by post-optimisation of the published record arrays, with C search programs written by Claude Opus, and verified exhaustively."
