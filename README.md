@@ -2,13 +2,15 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23741408.svg)](https://doi.org/10.5281/zenodo.23741408)
 
-Explicit covering arrays that improve the best known sizes for ten
+Explicit covering arrays that improve the best known sizes for eleven
 parameter sets in the
 live covering array table
 [chrispbsmolen/ca-tools](https://github.com/chrispbsmolen/ca-tools)
 (table checked on 2026-10-28; version 1.1 adds three arrays from the
 same day; version 1.2 adds CA(825; 4, 7, 5) and CA(1050; 4, 8, 5), table
-re-checked on 2026-10-29).
+re-checked on 2026-10-29; version 1.3 improves three of our own
+entries and adds CA(3568; 4, 9, 7) and CA(4202; 4, 16, 6), table
+re-checked on 2026-10-30).
 
 | Parameters | Previous best | Previous construction | New N | File |
 |---|---|---|---|---|
@@ -16,15 +18,20 @@ re-checked on 2026-10-29).
 | CA(N; 4, 105, 3) | 657 | Density Mult Cyclic (Colbourn) | **644** | `arrays/CA_644_4_105_3.txt` |
 | CA(N; 4, 7, 5) | 910 | cross-sum (CKRS) | **825** | `arrays/CA_825_4_7_5.txt` |
 | CA(N; 4, 8, 5) | 1125 | derived from strength 5 (table entry k = 11) | **1050** | `arrays/CA_1050_4_8_5.txt` |
-| CA(N; 4, 7, 6) | 1844 | orthogonal array, fuse, postop (NCK) | **1838** | `arrays/CA_1838_4_7_6.txt` |
-| CA(N; 4, 8, 6) | 1975 | orthogonal array, fuse, postop (NCK) | **1966** | `arrays/CA_1966_4_8_6.txt` |
+| CA(N; 4, 7, 6) | 1844 | orthogonal array, fuse, postop (NCK) | **1832** | `arrays/CA_1832_4_7_6.txt` |
+| CA(N; 4, 8, 6) | 1975 | orthogonal array, fuse, postop (NCK) | **1963** | `arrays/CA_1963_4_8_6.txt` |
+| CA(N; 4, 9, 7) | 3569 | orthogonal array, fuse, postop (NCK) | **3568** | `arrays/CA_3568_4_9_7.txt` |
 | CA(N; 4, 12, 6) | 3944 | Density (Bryce-Colbourn), postop (NCK) | **3942** | `arrays/CA_3942_4_12_6.txt` |
-| CA(N; 4, 26, 6) | 6456 | Density Cyclic (Colbourn) | **6453** | `arrays/CA_6453_4_26_6.txt` |
+| CA(N; 4, 16, 6) | 4203 | SCPHF Tabu Search (Walker-Colbourn), fuse, postop (NCK) | **4202** | `arrays/CA_4202_4_16_6.txt` |
+| CA(N; 4, 26, 6) | 6456 | Density Cyclic (Colbourn) | **6445** | `arrays/CA_6445_4_26_6.txt` |
 | CA(N; 4, 27, 6) | 6606 | Density Cyclic (Colbourn) | **6581** | `arrays/CA_6581_4_27_6.txt` |
 
 `arrays/CA_636_4_100_3.txt` (version 1.0) is kept; CA(633; 4, 100, 3)
 was obtained from it by a second search. `arrays/CA_908_4_7_5.txt`
 (version 1.0) is kept as well; it is superseded by CA(825; 4, 7, 5).
+Likewise the earlier arrays CA(1838; 4, 7, 6), CA(1833; 4, 7, 6),
+CA(1966; 4, 8, 6), CA(6453; 4, 26, 6) and CA(6451; 4, 26, 6) are kept,
+each being the starting array of the next search (see Method).
 
 By deleting columns, CA(633; 4, 100, 3) also improves k = 95 to 99
 (previous best 637 or 639) and CA(644; 4, 105, 3) improves k = 101 to
@@ -47,6 +54,33 @@ Every array here was checked by `ca_verify` and by a second,
 independently written checker.
 
 ## Method
+
+### Version 1.3
+
+Three arrays continue the post-optimisation searches below, each
+search starting from our previous best array instead of the table
+array (`BEST_CANDIDATE` set to it):
+
+- CA(N; 4, 7, 6): 1838 (version 1.0) -> 1833 (`generators/CA_1833_4_7_6.c`) -> 1832 (`generators/CA_1832_4_7_6.c`)
+- CA(N; 4, 8, 6): 1966 (version 1.0) -> 1963 (`generators/CA_1963_4_8_6.c`)
+- CA(N; 4, 26, 6): 6453 (version 1.1) -> 6451 (`generators/CA_6451_4_26_6.c`) -> 6445 (`generators/CA_6445_4_26_6.c`)
+
+These programs were written by Claude Opus inside the same automated
+search loop; each ran for at most one hour on one CPU core.
+
+CA(3568; 4, 9, 7) and CA(4202; 4, 16, 6) involve no LLM at run time.
+They come from `generators/postop.c`, a classic delete-and-patch
+post-optimiser used as a baseline: pick a run with few uniquely
+covered 4-tuples, delete it, and re-home each lost tuple by
+reassigning entries of another run, a change being kept only if it
+uncovers nothing. Each array came out of a 5-minute run on the record
+array of ca-tools (from `aadwyer/CA_Database`):
+
+    gcc -O3 -march=native -o postop generators/postop.c -lm
+    ./postop CA_3569_4_9_7.txt 4 7 300 out.txt
+
+Checked on 2026-10-30: the live ca-tools table still gives 1844, 1975,
+3569, 4203 and 6456 for these five parameter sets.
 
 ### Coset unions (version 1.2: CA(825; 4, 7, 5), CA(1050; 4, 8, 5))
 
