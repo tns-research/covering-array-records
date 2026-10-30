@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use these arrays, please cite them as below."
-title: "Covering array records: strength-4 covering arrays improving the best known sizes"
+title: "Covering array records: strength-3 and strength-4 covering arrays improving the best known sizes"
 type: dataset
 authors:
   - family-names: Sitjar
@@ -10,7 +10,7 @@ authors:
 license: CC-BY-4.0
 doi: "10.5281/zenodo.23741408"
 repository-code: "https://github.com/tns-research/covering-array-records"
-version: "1.3"
+version: "1.4"
 date-released: "2026-10-30"
 keywords:
   - covering arrays
@@ -18,5 +18,6 @@ keywords:
   - combinatorial testing
   - local search
   - linear codes
+  - group actions
   - LLM-written search programs
-abstract: "Explicit covering arrays CA(633; 4, 100, 3), CA(644; 4, 105, 3), CA(825; 4, 7, 5), CA(1050; 4, 8, 5), CA(1832; 4, 7, 6), CA(1963; 4, 8, 6), CA(3568; 4, 9, 7), CA(3942; 4, 12, 6), CA(4202; 4, 16, 6), CA(6445; 4, 26, 6) and CA(6581; 4, 27, 6), each improving the best known size in the ca-tools covering array table, obtained by unions of cosets of linear codes over GF(5) (k = 7, 8) and by post-optimisation of the published record arrays, with C search programs written by Claude Opus, and verified exhaustively."
+abstract: "Explicit covering arrays improving the best known size for 39 parameter sets of the ca-tools covering array table: 13 at strength 3 (v = 5 to 24) and 26 at strength 4 (v = 3, 5, 6, 7, 10, 12), including CA(2736; 4, 10, 6) (previous best 3208), CA(3000; 4, 11, 6) (3671) and CA(1006; 4, 8, 5) (1125). Obtained by orbit search under PGL(2, q), unions of cosets of linear codes over GF(5) and post-optimisation of the published record arrays, with C search programs written by Claude Opus, and verified exhaustively by two independent checkers."
