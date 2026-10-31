@@ -2,10 +2,13 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23741408.svg)](https://doi.org/10.5281/zenodo.23741408)
 
-Explicit covering arrays that improve the best known sizes for 39
-parameter sets in the
-live covering array table
-[chrispbsmolen/ca-tools](https://github.com/chrispbsmolen/ca-tools).
+Explicit covering arrays that improve the best known sizes for 31
+parameter sets. All 39 arrays in the table below improved the live covering
+array table
+[chrispbsmolen/ca-tools](https://github.com/chrispbsmolen/ca-tools)
+at commit 392d8c9; the eight marked as overtaken no longer hold the best known
+size (see below). The note describing them is at
+[doi:10.5281/zenodo.23842218](https://doi.org/10.5281/zenodo.23842218).
 Versions 1.0 to 1.3 hold strength-4 arrays. Version 1.4 adds 28 parameter
 sets (13 at strength 3, 15 at strength 4) and improves three of our own
 entries: CA(1006; 4, 8, 5), CA(1957; 4, 8, 6) and CA(3240; 4, 12, 6). All
@@ -39,17 +42,17 @@ entries: CA(1006; 4, 8, 5), CA(1957; 4, 8, 6) and CA(3240; 4, 12, 6). All
 | CA(N; 4, 12, 6) | 3944 | Density (Bryce-Colbourn), postop (NCK) | **3240** | `arrays/CA_3240_4_12_6.txt` |
 | CA(N; 4, 13, 6) | 4027 | SCPHF Tabu Search (Walker-Colbourn) fuse postop NCK | **3606** | `arrays/CA_3606_4_13_6.txt` |
 | CA(N; 4, 14, 6) | 4080 | SCPHF Tabu Search (Walker-Colbourn) fuse postop NCK | **3846** | `arrays/CA_3846_4_14_6.txt` |
-| CA(N; 4, 15, 6) | 4132 | SCPHF Tabu Search (Walker-Colbourn) fuse postop NCK | **4116** | `arrays/CA_4116_4_15_6.txt` |
-| CA(N; 4, 16, 6) | 4203 | SCPHF Tabu Search (Walker-Colbourn), fuse, postop (NCK) | **4202** | `arrays/CA_4202_4_16_6.txt` |
-| CA(N; 4, 19, 6) | 5422 | Density Cyclic (Colbourn) postop NCK | **5046** | `arrays/CA_5046_4_19_6.txt` |
-| CA(N; 4, 20, 6) | 5584 | Density Cyclic (Colbourn) postop NCK | **5346** | `arrays/CA_5346_4_20_6.txt` |
+| CA(N; 4, 15, 6) | 4132 | SCPHF Tabu Search (Walker-Colbourn) fuse postop NCK | 4116 (overtaken: 4101) | `arrays/CA_4116_4_15_6.txt` |
+| CA(N; 4, 16, 6) | 4203 | SCPHF Tabu Search (Walker-Colbourn), fuse, postop (NCK) | 4202 (overtaken: 4111) | `arrays/CA_4202_4_16_6.txt` |
+| CA(N; 4, 19, 6) | 5422 | Density Cyclic (Colbourn) postop NCK | 5046 (overtaken: 4293) | `arrays/CA_5046_4_19_6.txt` |
+| CA(N; 4, 20, 6) | 5584 | Density Cyclic (Colbourn) postop NCK | 5346 (overtaken: 4414) | `arrays/CA_5346_4_20_6.txt` |
 | CA(N; 4, 21, 6) | 5743 | Density Cyclic (Colbourn) postop NCK | **5487** | `arrays/CA_5487_4_21_6.txt` |
 | CA(N; 4, 22, 6) | 5895 | Density Cyclic (Colbourn) postop NCK | **5678** | `arrays/CA_5678_4_22_6.txt` |
-| CA(N; 4, 23, 6) | 6062 | Density Cyclic (Colbourn) postop NCK | **6051** | `arrays/CA_6051_4_23_6.txt` |
+| CA(N; 4, 23, 6) | 6062 | Density Cyclic (Colbourn) postop NCK | 6051 (overtaken: 6023) | `arrays/CA_6051_4_23_6.txt` |
 | CA(N; 4, 26, 6) | 6456 | Density Cyclic (Colbourn) | **6445** | `arrays/CA_6445_4_26_6.txt` |
-| CA(N; 4, 27, 6) | 6606 | Density Cyclic (Colbourn) | **6581** | `arrays/CA_6581_4_27_6.txt` |
-| CA(N; 4, 29, 6) | 6851 | 3-Restricted SCPHF RE (CL) fuse (table entry k = 30) | **6846** | `arrays/CA_6846_4_29_6.txt` |
-| CA(N; 4, 9, 7) | 3569 | orthogonal array, fuse, postop (NCK) | **3568** | `arrays/CA_3568_4_9_7.txt` |
+| CA(N; 4, 27, 6) | 6606 | Density Cyclic (Colbourn) | 6581 (overtaken: 6568) | `arrays/CA_6581_4_27_6.txt` |
+| CA(N; 4, 29, 6) | 6851 | 3-Restricted SCPHF RE (CL) fuse (table entry k = 30) | 6846 (overtaken: 6807) | `arrays/CA_6846_4_29_6.txt` |
+| CA(N; 4, 9, 7) | 3569 | orthogonal array, fuse, postop (NCK) | 3568 (overtaken: 3557) | `arrays/CA_3568_4_9_7.txt` |
 | CA(N; 4, 6, 10) | 11957 | Augment OA | **11710** | `arrays/CA_11710_4_6_10.txt` |
 | CA(N; 4, 6, 12) | 24201 | Augment OA | **23772** | `arrays/CA_23772_4_6_12.txt` |
 
@@ -61,6 +64,12 @@ CA(1966; 4, 8, 6), CA(1963; 4, 8, 6), CA(6453; 4, 26, 6) and
 CA(6451; 4, 26, 6) are kept, each being the starting array of the next
 search (see Method). CA(1050; 4, 8, 5) and CA(3942; 4, 12, 6) are kept and
 superseded by CA(1006; 4, 8, 5) and CA(3240; 4, 12, 6).
+
+Eight arrays are overtaken by the deposit of Bai XunDi, published on 30 October
+2026 ([doi:10.5281/zenodo.23787055](https://doi.org/10.5281/zenodo.23787055)).
+We missed it when we first claimed them. Its eight smaller arrays pass both of
+our checkers. Our files stay here for reproducibility and are no longer claimed
+as improvements.
 
 By deleting columns, CA(633; 4, 100, 3) also improves k = 95 to 99
 (previous best 637 or 639) and CA(644; 4, 105, 3) improves k = 101 to
