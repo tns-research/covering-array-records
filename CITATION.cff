@@ -10,8 +10,8 @@ authors:
 license: CC-BY-4.0
 doi: "10.5281/zenodo.23741408"
 repository-code: "https://github.com/tns-research/covering-array-records"
-version: "1.4"
-date-released: "2026-10-30"
+version: "1.5"
+date-released: "2026-11-01"
 keywords:
   - covering arrays
   - combinatorial designs
@@ -20,4 +20,4 @@ keywords:
   - linear codes
   - group actions
   - LLM-written search programs
-abstract: "Explicit covering arrays improving the best known size for 39 parameter sets of the ca-tools covering array table: 13 at strength 3 (v = 5 to 24) and 26 at strength 4 (v = 3, 5, 6, 7, 10, 12), including CA(2736; 4, 10, 6) (previous best 3208), CA(3000; 4, 11, 6) (3671) and CA(1006; 4, 8, 5) (1125). Obtained by orbit search under PGL(2, q), unions of cosets of linear codes over GF(5) and post-optimisation of the published record arrays, with C search programs written by Claude Opus, and verified exhaustively by two independent checkers."
+abstract: "Explicit covering arrays for 39 parameter sets of the ca-tools covering array table, 13 at strength 3 (v = 5 to 24) and 26 at strength 4 (v = 3, 5, 6, 7, 10, 12); 33 of them hold the best known size on 2026-11-01, including CA(2616; 4, 10, 6) (previous best 3208), CA(3000; 4, 11, 6) (3671) and CA(1006; 4, 8, 5) (1125). Obtained by orbit search under PGL(2, q), unions of cosets of linear codes and post-optimisation of the published record arrays, with C search programs written by Claude Opus, and verified exhaustively by two independent checkers."

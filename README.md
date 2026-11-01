@@ -2,13 +2,16 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23741408.svg)](https://doi.org/10.5281/zenodo.23741408)
 
-Explicit covering arrays that improve the best known sizes for 31
-parameter sets. All 39 arrays in the table below improved the live covering
-array table
+Explicit covering arrays that improve the best known sizes for 33
+parameter sets. All 39 parameter sets in the table below improved the live
+covering array table
 [chrispbsmolen/ca-tools](https://github.com/chrispbsmolen/ca-tools)
-at commit 392d8c9; the eight marked as overtaken no longer hold the best known
-size (see below). The note describing them is at
-[doi:10.5281/zenodo.23842218](https://doi.org/10.5281/zenodo.23842218).
+at commit 392d8c9; the six marked as overtaken no longer hold the best known
+size (see below). The note at
+[doi:10.5281/zenodo.23842218](https://doi.org/10.5281/zenodo.23842218)
+describes the arrays of version 1.4.
+Version 1.5 improves four entries: CA(2616; 4, 10, 6), CA(3216; 4, 12, 6),
+CA(6559; 4, 27, 6) and CA(3556; 4, 9, 7).
 Versions 1.0 to 1.3 hold strength-4 arrays. Version 1.4 adds 28 parameter
 sets (13 at strength 3, 15 at strength 4) and improves three of our own
 entries: CA(1006; 4, 8, 5), CA(1957; 4, 8, 6) and CA(3240; 4, 12, 6). All
@@ -37,9 +40,9 @@ entries: CA(1006; 4, 8, 5), CA(1957; 4, 8, 6) and CA(3240; 4, 12, 6). All
 | CA(N; 4, 7, 6) | 1844 | orthogonal array, fuse, postop (NCK) | **1832** | `arrays/CA_1832_4_7_6.txt` |
 | CA(N; 4, 8, 6) | 1975 | orthogonal array, fuse, postop (NCK) | **1957** | `arrays/CA_1957_4_8_6.txt` |
 | CA(N; 4, 9, 6) | 2768 | Density (Bryce-Colbourn) postop NCK | **2518** | `arrays/CA_2518_4_9_6.txt` |
-| CA(N; 4, 10, 6) | 3208 | Density (Bryce-Colbourn) postop NCK | **2736** | `arrays/CA_2736_4_10_6.txt` |
+| CA(N; 4, 10, 6) | 3208 | Density (Bryce-Colbourn) postop NCK | **2616** | `arrays/CA_2616_4_10_6.txt` |
 | CA(N; 4, 11, 6) | 3671 | Density Cyclic (Colbourn) postop NCK | **3000** | `arrays/CA_3000_4_11_6.txt` |
-| CA(N; 4, 12, 6) | 3944 | Density (Bryce-Colbourn), postop (NCK) | **3240** | `arrays/CA_3240_4_12_6.txt` |
+| CA(N; 4, 12, 6) | 3944 | Density (Bryce-Colbourn), postop (NCK) | **3216** | `arrays/CA_3216_4_12_6.txt` |
 | CA(N; 4, 13, 6) | 4027 | SCPHF Tabu Search (Walker-Colbourn) fuse postop NCK | **3606** | `arrays/CA_3606_4_13_6.txt` |
 | CA(N; 4, 14, 6) | 4080 | SCPHF Tabu Search (Walker-Colbourn) fuse postop NCK | **3846** | `arrays/CA_3846_4_14_6.txt` |
 | CA(N; 4, 15, 6) | 4132 | SCPHF Tabu Search (Walker-Colbourn) fuse postop NCK | 4116 (overtaken: 4101) | `arrays/CA_4116_4_15_6.txt` |
@@ -50,9 +53,9 @@ entries: CA(1006; 4, 8, 5), CA(1957; 4, 8, 6) and CA(3240; 4, 12, 6). All
 | CA(N; 4, 22, 6) | 5895 | Density Cyclic (Colbourn) postop NCK | **5678** | `arrays/CA_5678_4_22_6.txt` |
 | CA(N; 4, 23, 6) | 6062 | Density Cyclic (Colbourn) postop NCK | 6051 (overtaken: 6023) | `arrays/CA_6051_4_23_6.txt` |
 | CA(N; 4, 26, 6) | 6456 | Density Cyclic (Colbourn) | **6445** | `arrays/CA_6445_4_26_6.txt` |
-| CA(N; 4, 27, 6) | 6606 | Density Cyclic (Colbourn) | 6581 (overtaken: 6568) | `arrays/CA_6581_4_27_6.txt` |
+| CA(N; 4, 27, 6) | 6606 | Density Cyclic (Colbourn) | **6559** | `arrays/CA_6559_4_27_6.txt` |
 | CA(N; 4, 29, 6) | 6851 | 3-Restricted SCPHF RE (CL) fuse (table entry k = 30) | 6846 (overtaken: 6807) | `arrays/CA_6846_4_29_6.txt` |
-| CA(N; 4, 9, 7) | 3569 | orthogonal array, fuse, postop (NCK) | 3568 (overtaken: 3557) | `arrays/CA_3568_4_9_7.txt` |
+| CA(N; 4, 9, 7) | 3569 | orthogonal array, fuse, postop (NCK) | **3556** | `arrays/CA_3556_4_9_7.txt` |
 | CA(N; 4, 6, 10) | 11957 | Augment OA | **11710** | `arrays/CA_11710_4_6_10.txt` |
 | CA(N; 4, 6, 12) | 24201 | Augment OA | **23772** | `arrays/CA_23772_4_6_12.txt` |
 
@@ -62,14 +65,18 @@ was obtained from it by a second search. `arrays/CA_908_4_7_5.txt`
 Likewise the earlier arrays CA(1838; 4, 7, 6), CA(1833; 4, 7, 6),
 CA(1966; 4, 8, 6), CA(1963; 4, 8, 6), CA(6453; 4, 26, 6) and
 CA(6451; 4, 26, 6) are kept, each being the starting array of the next
-search (see Method). CA(1050; 4, 8, 5) and CA(3942; 4, 12, 6) are kept and
-superseded by CA(1006; 4, 8, 5) and CA(3240; 4, 12, 6).
+search (see Method). CA(1050; 4, 8, 5), CA(3942; 4, 12, 6) and CA(3240; 4, 12, 6)
+are kept and superseded by CA(1006; 4, 8, 5) and CA(3216; 4, 12, 6). CA(2736; 4, 10, 6),
+CA(6581; 4, 27, 6) and CA(3568; 4, 9, 7) are kept and superseded by the arrays of
+version 1.5.
 
-Eight arrays are overtaken by the deposit of Bai XunDi, published on 30 October
+Six arrays are overtaken by the deposit of Bai XunDi, published on 30 October
 2026 ([doi:10.5281/zenodo.23787055](https://doi.org/10.5281/zenodo.23787055)).
-We missed it when we first claimed them. Its eight smaller arrays pass both of
+We missed it when we first claimed them. Its smaller arrays pass both of
 our checkers. Our files stay here for reproducibility and are no longer claimed
-as improvements.
+as improvements. Two more were overtaken by the same deposit until version 1.5:
+its CA(6568; 4, 27, 6) and CA(3557; 4, 9, 7) are now above our CA(6559; 4, 27, 6)
+and CA(3556; 4, 9, 7).
 
 By deleting columns, CA(633; 4, 100, 3) also improves k = 95 to 99
 (previous best 637 or 639) and CA(644; 4, 105, 3) improves k = 101 to
@@ -92,6 +99,31 @@ Every array here was checked by `ca_verify` and by a second,
 independently written checker.
 
 ## Method
+
+### Version 1.5
+
+All four come from the automated search loop (programs written by Claude Opus,
+one hour on one CPU core at most, each program in `generators/`).
+
+- **CA(2616; 4, 10, 6)** (from CA(2736; 4, 10, 6)): orbit search under PGL(2, 5),
+  with a warm start from the previous array and a search over the mix of generic,
+  two-symbol and constant orbits instead of a descent one starter at a time.
+- **CA(3216; 4, 12, 6)**: annealing over row orbits under PGL(2, 5) on the symbols,
+  the short orbits being frozen as a prefix, then a descent through subgroups.
+- **CA(6559; 4, 27, 6)** (6581 -> 6565 -> 6560 -> 6559, the intermediate arrays are
+  here): delete a run and repair, with multi-cell moves and large-neighbourhood
+  search on a small subset of rows.
+- **CA(3556; 4, 9, 7)**: a union of 508 cosets of the all-ones code of length 9 over
+  Z_7 (508 x 7 runs), which is the case d = 1 of the coset unions of version 1.2,
+  with no completion or pruning needed.
+
+Prior art, checked on 2026-11-01 for all 33 current entries, with stair-step and
+symbol fusion taken into account: the ca-tools table at commit e8afc9a and its open
+pull requests, and the papers of Bai XunDi (doi:10.5281/zenodo.23787051,
+doi:10.5281/zenodo.23787053 and the data at doi:10.5281/zenodo.23787055), Smolen
+(doi:10.5281/zenodo.23848283) and Canli (doi:10.5281/zenodo.23839216). None gives
+a size at or below ours. A smaller unpublished or very recent array remains
+possible; an issue on this repository is welcome.
 
 ### Version 1.4
 
