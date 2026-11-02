@@ -2,14 +2,18 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23741408.svg)](https://doi.org/10.5281/zenodo.23741408)
 
-Explicit covering arrays that improve the best known sizes for 33
-parameter sets. All 39 parameter sets in the table below improved the live
+Explicit covering arrays that improve the best known sizes for 40
+parameter sets. All 47 parameter sets in the table below improved the live
 covering array table
 [chrispbsmolen/ca-tools](https://github.com/chrispbsmolen/ca-tools)
-at commit 392d8c9; the six marked as overtaken no longer hold the best known
+when they were added (commit 392d8c9 for the first 39, commit 6c1e11c for the
+eight of version 1.6); the seven marked as overtaken no longer hold the best known
 size (see below). The note at
 [doi:10.5281/zenodo.23842218](https://doi.org/10.5281/zenodo.23842218)
 describes the arrays of version 1.4.
+Version 1.6 adds eight parameter sets: CA(954; 3, 12, 8), CA(1813; 3, 13, 10),
+CA(3057; 3, 15, 12), CA(5522; 3, 19, 14), CA(5870; 3, 19, 15), CA(6947; 4, 35, 6),
+CA(7037; 4, 36, 6) and CA(2646; 5, 13, 4).
 Version 1.5 improves four entries: CA(2616; 4, 10, 6), CA(3216; 4, 12, 6),
 CA(6559; 4, 27, 6) and CA(3556; 4, 9, 7).
 Versions 1.0 to 1.3 hold strength-4 arrays. Version 1.4 adds 28 parameter
@@ -22,13 +26,18 @@ entries: CA(1006; 4, 8, 5), CA(1957; 4, 8, 6) and CA(3240; 4, 12, 6). All
 | CA(N; 3, 32, 5) | 324 | Raaphorst-Moura-Stevens extension (Bergeron 2026): m columns added to the RMS CA(2q^3 - 1; 3, q^2 + q + 1, q), q a prime power, using L = max(q - 2, ceil(m (q - 2) / q)) layers of q^2 rows; N = 2q^3 - 1 + q^2 L for m = 1 and N = 2q^3 + q^2 L for m >= 2 | **323** | `arrays/CA_323_3_32_5.txt` |
 | CA(N; 3, 58, 7) | 930 | Raaphorst-Moura-Stevens extension (Bergeron 2026): m columns added to the RMS CA(2q^3 - 1; 3, q^2 + q + 1, q), q a prime power, using L = max(q - 2, ceil(m (q - 2) / q)) layers of q^2 rows; N = 2q^3 - 1 + q^2 L for m = 1 and N = 2q^3 + q^2 L for m >= 2 | **929** | `arrays/CA_929_3_58_7.txt` |
 | CA(N; 3, 74, 8) | 1407 | Raaphorst-Moura-Stevens extension (Bergeron 2026): m columns added to the RMS CA(2q^3 - 1; 3, q^2 + q + 1, q), q a prime power, using L = max(q - 2, ceil(m (q - 2) / q)) layers of q^2 rows; N = 2q^3 - 1 + q^2 L for m = 1 and N = 2q^3 + q^2 L for m >= 2 | **1406** | `arrays/CA_1406_3_74_8.txt` |
+| CA(N; 3, 12, 8) | 955 | Bai XunDi (doi:10.5281/zenodo.23787055): OA(q^3; 3, q+1, q) with evolved extension columns, greedy patch rows, row deletion and tabu | **954** | `arrays/CA_954_3_12_8.txt` |
 | CA(N; 3, 92, 9) | 2024 | Raaphorst-Moura-Stevens extension (Bergeron 2026): m columns added to the RMS CA(2q^3 - 1; 3, q^2 + q + 1, q), q a prime power, using L = max(q - 2, ceil(m (q - 2) / q)) layers of q^2 rows; N = 2q^3 - 1 + q^2 L for m = 1 and N = 2q^3 + q^2 L for m >= 2 | **2023** | `arrays/CA_2023_3_92_9.txt` |
 | CA(N; 3, 8, 10) | 1180 | ordered design construction of Cohen, Colbourn and Ling (2008, Construction 2), strength 3, with a binary ingredient CA(12; 3, 8, 2) with two constant rows, as implemented in CAs (ODbasedCA), the route chosen by CAs::bestCA | **1170** | `arrays/CA_1170_3_8_10.txt` |
-| CA(N; 3, 16, 10) | 2215 | Chateauneuf-Kreher doubling (Chateauneuf and Kreher 2002), strength 3, as implemented in CAs (CK_doublingCA), the route chosen by CAs::bestCA | **2205** | `arrays/CA_2205_3_16_10.txt` |
+| CA(N; 3, 13, 10) | 1848 | Bai XunDi (doi:10.5281/zenodo.23787055): poly2 + pencil cover, q = 11 | **1813** | `arrays/CA_1813_3_13_10.txt` |
+| CA(N; 3, 16, 10) | 2215 | Chateauneuf-Kreher doubling (Chateauneuf and Kreher 2002), strength 3, as implemented in CAs (CK_doublingCA), the route chosen by CAs::bestCA | 2205 (overtaken: 2178) | `arrays/CA_2205_3_16_10.txt` |
 | CA(N; 3, 134, 11) | 3750 | Raaphorst-Moura-Stevens extension (Bergeron 2026): m columns added to the RMS CA(2q^3 - 1; 3, q^2 + q + 1, q), q a prime power, using L = max(q - 2, ceil(m (q - 2) / q)) layers of q^2 rows; N = 2q^3 - 1 + q^2 L for m = 1 and N = 2q^3 + q^2 L for m >= 2 | **3749** | `arrays/CA_3749_3_134_11.txt` |
 | CA(N; 3, 8, 12) | 1992 | ordered design construction of Cohen, Colbourn and Ling (2008, Construction 2), strength 3, with a binary ingredient CA(12; 3, 8, 2) with two constant rows, as implemented in CAs (ODbasedCA), the route chosen by CAs::bestCA | **1980** | `arrays/CA_1980_3_8_12.txt` |
+| CA(N; 3, 15, 12) | 3098 | Bai XunDi (doi:10.5281/zenodo.23787055): poly2 + pencil cover, q = 13 | **3057** | `arrays/CA_3057_3_15_12.txt` |
 | CA(N; 3, 184, 13) | 6252 | Raaphorst-Moura-Stevens extension (Bergeron 2026): m columns added to the RMS CA(2q^3 - 1; 3, q^2 + q + 1, q), q a prime power, using L = max(q - 2, ceil(m (q - 2) / q)) layers of q^2 rows; N = 2q^3 - 1 + q^2 L for m = 1 and N = 2q^3 + q^2 L for m >= 2 | **6251** | `arrays/CA_6251_3_184_13.txt` |
 | CA(N; 3, 8, 14) | 3108 | ordered design construction of Cohen, Colbourn and Ling (2008, Construction 2), strength 3, with a binary ingredient CA(12; 3, 8, 2) with two constant rows, as implemented in CAs (ODbasedCA), the route chosen by CAs::bestCA | **3094** | `arrays/CA_3094_3_8_14.txt` |
+| CA(N; 3, 19, 14) | 5568 | hyperoval-poly2, alphabet-restricted, q = 16, as entered in the table with the arrays of Bai XunDi (doi:10.5281/zenodo.23787055) | **5522** | `arrays/CA_5522_3_19_14.txt` |
+| CA(N; 3, 19, 15) | 5879 | Bai XunDi (doi:10.5281/zenodo.23787055): hyperoval-poly2 with alphabet restriction and fusion | **5870** | `arrays/CA_5870_3_19_15.txt` |
 | CA(N; 3, 8, 18) | 6444 | ordered design construction of Cohen, Colbourn and Ling (2008, Construction 2), strength 3, with a binary ingredient CA(12; 3, 8, 2) with two constant rows, as implemented in CAs (ODbasedCA), the route chosen by CAs::bestCA | **6426** | `arrays/CA_6426_3_8_18.txt` |
 | CA(N; 3, 8, 20) | 8760 | ordered design construction of Cohen, Colbourn and Ling (2008, Construction 2), strength 3, with a binary ingredient CA(12; 3, 8, 2) with two constant rows, as implemented in CAs (ODbasedCA), the route chosen by CAs::bestCA | **8740** | `arrays/CA_8740_3_8_20.txt` |
 | CA(N; 3, 8, 24) | 14928 | ordered design construction of Cohen, Colbourn and Ling (2008, Construction 2), strength 3, with a binary ingredient CA(12; 3, 8, 2) with two constant rows, as implemented in CAs (ODbasedCA), the route chosen by CAs::bestCA | **14904** | `arrays/CA_14904_3_8_24.txt` |
@@ -55,9 +64,12 @@ entries: CA(1006; 4, 8, 5), CA(1957; 4, 8, 6) and CA(3240; 4, 12, 6). All
 | CA(N; 4, 26, 6) | 6456 | Density Cyclic (Colbourn) | **6445** | `arrays/CA_6445_4_26_6.txt` |
 | CA(N; 4, 27, 6) | 6606 | Density Cyclic (Colbourn) | **6559** | `arrays/CA_6559_4_27_6.txt` |
 | CA(N; 4, 29, 6) | 6851 | 3-Restricted SCPHF RE (CL) fuse (table entry k = 30) | 6846 (overtaken: 6807) | `arrays/CA_6846_4_29_6.txt` |
+| CA(N; 4, 35, 6) | 7185 | Bai XunDi (doi:10.5281/zenodo.23787055): near-CPHF over GF(7), fusion 7 -> 6, tabu repair, row deletion (table entry k = 36) | **6947** | `arrays/CA_6947_4_35_6.txt` |
+| CA(N; 4, 36, 6) | 7185 | Bai XunDi (doi:10.5281/zenodo.23787055): near-CPHF over GF(7), fusion 7 -> 6, tabu repair, row deletion | **7037** | `arrays/CA_7037_4_36_6.txt` |
 | CA(N; 4, 9, 7) | 3569 | orthogonal array, fuse, postop (NCK) | **3556** | `arrays/CA_3556_4_9_7.txt` |
 | CA(N; 4, 6, 10) | 11957 | Augment OA | **11710** | `arrays/CA_11710_4_6_10.txt` |
 | CA(N; 4, 6, 12) | 24201 | Augment OA | **23772** | `arrays/CA_23772_4_6_12.txt` |
+| CA(N; 5, 13, 4) | 2669 | Bai XunDi (doi:10.5281/zenodo.23787055): near-CPHF(2) + aligned linear residual block | **2646** | `arrays/CA_2646_5_13_4.txt` |
 
 `arrays/CA_636_4_100_3.txt` (version 1.0) is kept; CA(633; 4, 100, 3)
 was obtained from it by a second search. `arrays/CA_908_4_7_5.txt`
@@ -99,6 +111,26 @@ Every array here was checked by `ca_verify` and by a second,
 independently written checker.
 
 ## Method
+
+### Version 1.6
+
+All eight come from `generators/postop.c` (delete a run and repair), with no LLM at
+run time, applied to the record arrays of the table. Seven of these starting arrays
+are from the deposit of Bai XunDi (doi:10.5281/zenodo.23787055), the eighth,
+CA(5568; 3, 19, 14), from the table entry built the same way; each improvement is a
+post-optimisation of his array, and we credit the construction to him. The table
+gives CA(4, 35, 6) the value of its k = 36 entry, 7185, and the gains there are the
+largest of this version (3.3 % and 2.1 %). CA(1813; 3, 13, 10) continues from our own
+intermediate CA(1814; 3, 13, 10), itself obtained from his CA(1848; 3, 13, 10).
+
+CA(2205; 3, 16, 10) of version 1.4 is overtaken: the table now derives
+CA(2178; 3, 16, 10) by Chateauneuf-Kreher doubling.
+
+Prior art for the eight, checked on 2026-11-02: the ca-tools table at commit 6c1e11c
+with stair-step, symbol fusion and derived entries, its open pull requests (including
+those of Arhan Canli up to number 29), and the deposits of Bai XunDi, Smolen
+(doi:10.5281/zenodo.23848283), Canli (doi:10.5281/zenodo.23839216) and Grey
+(doi:10.5281/zenodo.23877721). None gives a size at or below ours.
 
 ### Version 1.5
 
