@@ -2,14 +2,20 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23741408.svg)](https://doi.org/10.5281/zenodo.23741408)
 
-Explicit covering arrays that improve the best known sizes for 102
-parameter sets. All 106 parameter sets in the table below improved the live
+Explicit covering arrays that improve the best known sizes for 104
+parameter sets. All 109 parameter sets in the table below improved the live
 covering array table
 [chrispbsmolen/ca-tools](https://github.com/chrispbsmolen/ca-tools)
 when they were added (commit 392d8c9 for the first 39, commit 6c1e11c for the
 eight of version 1.6, commit 7b76f80 for version 1.7, commit 84933d2 for version 1.8, commit 8a30577
-for version 1.9); the four marked as overtaken no longer hold the best known size
-(see below).
+for version 1.9, commit 69c708e for version 1.10); the five marked as overtaken no
+longer hold the best known size (see below).
+Version 1.10 adds three parameter sets, CA(559529; 4, 48, 20), CA(559570; 4, 48, 21)
+and CA(559613; 4, 48, 22), and improves eight of our own entries (see Method). The
+largest gains are CA(291; 3, 32, 5) and CA(884; 3, 58, 7) (our previous 323 and 929,
+previous best 324 and 930), from search programs written by Claude Opus, and
+CA(77835; 4, 31, 12), CA(36435; 4, 29, 10) and CA(42436; 5, 21, 6) by post-optimisation
+(0.5 % to 0.8 % below our previous entries).
 Version 1.9 adds five parameter sets and improves 41 of our own entries (see Method).
 The largest gains are on the line CA(N; 4, k, 6): CA(6871; 4, 38, 6) and
 CA(7195; 4, 39, 6) (previous best 7812 and 7902), from search programs written by
@@ -41,9 +47,9 @@ entries: CA(1006; 4, 8, 5), CA(1957; 4, 8, 6) and CA(3240; 4, 12, 6). All
 | Parameters | Previous best | Previous construction | New N | File |
 |---|---|---|---|---|
 | CA(N; 3, 34, 3) | 86 | Bai XunDi (doi:10.5281/zenodo.23787055): column extension + tabu repair and row-deletion post-optimisation starting from CA(87;3,39,3) = Kianoosh Shokri, Lucia Moura, Thm 5.2.8 (q-plication), q=3 (table entry k = 39) | **82** | `arrays/CA_82_3_34_3.txt` |
-| CA(N; 3, 32, 5) | 324 | Raaphorst-Moura-Stevens extension (Bergeron 2026): m columns added to the RMS CA(2q^3 - 1; 3, q^2 + q + 1, q), q a prime power, using L = max(q - 2, ceil(m (q - 2) / q)) layers of q^2 rows; N = 2q^3 - 1 + q^2 L for m = 1 and N = 2q^3 + q^2 L for m >= 2 | **323** | `arrays/CA_323_3_32_5.txt` |
+| CA(N; 3, 32, 5) | 324 | Raaphorst-Moura-Stevens extension (Bergeron 2026): m columns added to the RMS CA(2q^3 - 1; 3, q^2 + q + 1, q), q a prime power, using L = max(q - 2, ceil(m (q - 2) / q)) layers of q^2 rows; N = 2q^3 - 1 + q^2 L for m = 1 and N = 2q^3 + q^2 L for m >= 2 | **291** | `arrays/CA_291_3_32_5.txt` |
 | CA(N; 3, 11, 6) | 418 | Grey (doi:10.5281/zenodo.23877721): Iterative row deletion with Nurmela-style tabu single-cell post-optimization from a 426-row PSL(2,5) group-orbit union on P^1(F_5) (1 constant 6-row orbit + 5 generic 60-row orbits + 4 binary-stabilizer {0,inf}^11 30-row orbits, repaired to a 426-row covering array via single-cell tabu moves) | 416 (overtaken: 411) | `arrays/CA_416_3_11_6.txt` |
-| CA(N; 3, 58, 7) | 930 | Raaphorst-Moura-Stevens extension (Bergeron 2026): m columns added to the RMS CA(2q^3 - 1; 3, q^2 + q + 1, q), q a prime power, using L = max(q - 2, ceil(m (q - 2) / q)) layers of q^2 rows; N = 2q^3 - 1 + q^2 L for m = 1 and N = 2q^3 + q^2 L for m >= 2 | **929** | `arrays/CA_929_3_58_7.txt` |
+| CA(N; 3, 58, 7) | 930 | Raaphorst-Moura-Stevens extension (Bergeron 2026): m columns added to the RMS CA(2q^3 - 1; 3, q^2 + q + 1, q), q a prime power, using L = max(q - 2, ceil(m (q - 2) / q)) layers of q^2 rows; N = 2q^3 - 1 + q^2 L for m = 1 and N = 2q^3 + q^2 L for m >= 2 | **884** | `arrays/CA_884_3_58_7.txt` |
 | CA(N; 3, 12, 8) | 955 | Bai XunDi (doi:10.5281/zenodo.23787055): OA(q^3; 3, q+1, q) with evolved extension columns, greedy patch rows, row deletion and tabu | **954** | `arrays/CA_954_3_12_8.txt` |
 | CA(N; 3, 74, 8) | 1407 | Raaphorst-Moura-Stevens extension (Bergeron 2026): m columns added to the RMS CA(2q^3 - 1; 3, q^2 + q + 1, q), q a prime power, using L = max(q - 2, ceil(m (q - 2) / q)) layers of q^2 rows; N = 2q^3 - 1 + q^2 L for m = 1 and N = 2q^3 + q^2 L for m >= 2 | **1406** | `arrays/CA_1406_3_74_8.txt` |
 | CA(N; 3, 92, 9) | 2024 | Raaphorst-Moura-Stevens extension (Bergeron 2026): m columns added to the RMS CA(2q^3 - 1; 3, q^2 + q + 1, q), q a prime power, using L = max(q - 2, ceil(m (q - 2) / q)) layers of q^2 rows; N = 2q^3 - 1 + q^2 L for m = 1 and N = 2q^3 + q^2 L for m >= 2 | **2023** | `arrays/CA_2023_3_92_9.txt` |
@@ -109,33 +115,36 @@ entries: CA(1006; 4, 8, 5), CA(1957; 4, 8, 6) and CA(3240; 4, 12, 6). All
 | CA(N; 4, 26, 10) | 29269 | Bai XunDi (doi:10.5281/zenodo.23787055): Sherwood CPHF(2;k,q,4) (Singer-cycle seeds + tabu column extension), CPHF->CA expansion | **29210** | `arrays/CA_29210_4_26_10.txt` |
 | CA(N; 4, 27, 10) | 36860 | Bai XunDi (doi:10.5281/zenodo.23787055): CPHF tabu + residual block CA(41371; 4, 29, 11); symbol fusion CKRS 2010 Lemma 3.1 (Colbourn, Keri, Rivas Soriano, Schlage-Puchta), CAN(t,k,v-1) <= CAN(t,k,v) - 2; column drop; drop columns [27, 28] + | **35188** | `arrays/CA_35188_4_27_10.txt` |
 | CA(N; 4, 28, 10) | 39954 | Bai XunDi (doi:10.5281/zenodo.23787055): CPHF tabu + residual block CA(41371; 4, 29, 11); symbol fusion CKRS 2010 Lemma 3.1 (Colbourn, Keri, Rivas Soriano, Schlage-Puchta), CAN(t,k,v-1) <= CAN(t,k,v) - 2; column drop; drop columns [27] + opt | **35963** | `arrays/CA_35963_4_28_10.txt` |
-| CA(N; 4, 29, 10) | 41007 | Bai XunDi (doi:10.5281/zenodo.23787055): CPHF tabu + residual block construction CA(41371; 4, 29, 11); symbol fusion CKRS 2010 Lemma 3.1 (Colbourn, Keri, Rivas Soriano, Schlage-Puchta), CAN(t,k,v-1) <= CAN(t,k,v) - 2; prune -> CKRS fusion (fuse2, rows [12417, 11793]) x1 with optimal hitting-set pruning after each fusion, from CA(41371; 4, 29, 11) | **36615** | `arrays/CA_36615_4_29_10.txt` |
+| CA(N; 4, 29, 10) | 41007 | Bai XunDi (doi:10.5281/zenodo.23787055): CPHF tabu + residual block construction CA(41371; 4, 29, 11); symbol fusion CKRS 2010 Lemma 3.1 (Colbourn, Keri, Rivas Soriano, Schlage-Puchta), CAN(t,k,v-1) <= CAN(t,k,v) - 2; prune -> CKRS fusion (fuse2, rows [12417, 11793]) x1 with optimal hitting-set pruning after each fusion, from CA(41371; 4, 29, 11) | **36435** | `arrays/CA_36435_4_29_10.txt` |
 | CA(N; 4, 6, 12) | 24201 | Augment OA | **23772** | `arrays/CA_23772_4_6_12.txt` |
 | CA(N; 4, 15, 12) | 40542 | Bai XunDi (doi:10.5281/zenodo.23787055): degree-2 polynomial construction (poly2) with a pencil cover of AG(2,q), CA(40550; 4, 15, 12); then dedupe + optimal hitting-set pruning (CP-SAT) of CA(40550; 4, 15, 12) (R=7 redundant rows) | **40476** | `arrays/CA_40476_4_15_12.txt` |
 | CA(N; 4, 27, 12) | 56785 | Bai XunDi (doi:10.5281/zenodo.23787055): Sherwood CPHF -> CA, symbol fusion, wildcard row-deletion post-optimisation (table entry k = 29) | **56755** | `arrays/CA_56755_4_27_12.txt` |
 | CA(N; 4, 28, 12) | 56785 | Bai XunDi (doi:10.5281/zenodo.23787055): Sherwood CPHF -> CA, symbol fusion, wildcard row-deletion post-optimisation (table entry k = 29) | **56768** | `arrays/CA_56768_4_28_12.txt` |
 | CA(N; 4, 29, 12) | 56785 | Bai XunDi (doi:10.5281/zenodo.23787055): Sherwood CPHF -> CA, symbol fusion, wildcard row-deletion post-optimisation | **56776** | `arrays/CA_56776_4_29_12.txt` |
-| CA(N; 4, 31, 12) | 79324 | Bai XunDi (doi:10.5281/zenodo.23787055): CPHF tabu + residual block CA(81445; 4, 32, 13); symbol fusion CKRS 2010 Lemma 3.1 (Colbourn, Keri, Rivas Soriano, Schlage-Puchta), CAN(t,k,v-1) <= CAN(t,k,v) - 2; column drop; drop columns [31] + optimal hitting-set pruning of CA(80989; 4, 32, 12) | **78458** | `arrays/CA_78458_4_31_12.txt` |
+| CA(N; 4, 31, 12) | 79324 | Bai XunDi (doi:10.5281/zenodo.23787055): CPHF tabu + residual block CA(81445; 4, 32, 13); symbol fusion CKRS 2010 Lemma 3.1 (Colbourn, Keri, Rivas Soriano, Schlage-Puchta), CAN(t,k,v-1) <= CAN(t,k,v) - 2; column drop; drop columns [31] + optimal hitting-set pruning of CA(80989; 4, 32, 12) | **77835** | `arrays/CA_77835_4_31_12.txt` |
 | CA(N; 4, 32, 12) | 80972 | Bai XunDi (doi:10.5281/zenodo.23787055): CPHF tabu + residual block construction CA(81445; 4, 32, 13); symbol fusion CKRS 2010 Lemma 3.1 (Colbourn, Keri, Rivas Soriano, Schlage-Puchta), CAN(t,k,v-1) <= CAN(t,k,v) - 2; prune -> CKRS fusion (fuse2, rows [18341, 67895]) x1 with optimal hitting-set pruning after each fusion, from CA(81445; 4, 32, 13) | **80780** | `arrays/CA_80780_4_32_12.txt` |
 | CA(N; 4, 19, 14) | 106281 | Bai XunDi (doi:10.5281/zenodo.23787055): degree-2 polynomial construction (poly2) with a pencil cover of AG(2,q), CA(106293; 4, 19, 14); then dedupe + optimal hitting-set pruning (CP-SAT) of CA(106293; 4, 19, 14) (R=9 redundant rows) | **106023** | `arrays/CA_106023_4_19_14.txt` |
 | CA(N; 4, 24, 14) | 126972 | 3-Restricted SCPHF RE (CL) fuse fuse | **126726** | `arrays/CA_126726_4_24_14.txt` |
-| CA(N; 4, 25, 14) | 126972 | Bai XunDi (doi:10.5281/zenodo.23787055): elliptic two-block array, CAN(t,#E(F_q),q) <= 2q^t - q^(t-1), q=16; then symbol fusion CKRS 2010 Lemma 3.1 (Colbourn, Keri, Rivas Soriano, Schlage-Puchta), CAN(t,k,v-1) <= CAN(t,k,v) - 2, 2 step(s) | **126935** | `arrays/CA_126935_4_25_14.txt` |
+| CA(N; 4, 25, 14) | 126972 | Bai XunDi (doi:10.5281/zenodo.23787055): elliptic two-block array, CAN(t,#E(F_q),q) <= 2q^t - q^(t-1), q=16; then symbol fusion CKRS 2010 Lemma 3.1 (Colbourn, Keri, Rivas Soriano, Schlage-Puchta), CAN(t,k,v-1) <= CAN(t,k,v) - 2, 2 step(s) | 126935 (overtaken: 126929) | `arrays/CA_126935_4_25_14.txt` |
 | CA(N; 4, 19, 15) | 110386 | Bai XunDi (doi:10.5281/zenodo.23787055): degree-2 polynomial construction (poly2) with a pencil cover of AG(2,q), CA(110397; 4, 19, 15); then dedupe + optimal hitting-set pruning (CP-SAT) of CA(110397; 4, 19, 15) (R=9 redundant rows) | **110273** | `arrays/CA_110273_4_19_15.txt` |
 | CA(N; 4, 24, 15) | 126974 | 3-Restricted SCPHF RE (CL) fuse | **126845** | `arrays/CA_126845_4_24_15.txt` |
 | CA(N; 4, 25, 15) | 126974 | Bai XunDi (doi:10.5281/zenodo.23787055): elliptic two-block array, CAN(t,#E(F_q),q) <= 2q^t - q^(t-1), q=16; then symbol fusion CKRS 2010 Lemma 3.1 (Colbourn, Keri, Rivas Soriano, Schlage-Puchta), CAN(t,k,v-1) <= CAN(t,k,v) - 2, 1 step(s) | **126931** | `arrays/CA_126931_4_25_15.txt` |
 | CA(N; 4, 19, 16) | 114495 | Bai XunDi (doi:10.5281/zenodo.23787055): degree-2 polynomial construction (poly2) with a pencil cover of AG(2,q), CA(114505; 4, 19, 16); then dedupe + optimal hitting-set pruning (CP-SAT) of CA(114505; 4, 19, 16) (R=9 redundant rows) | **114489** | `arrays/CA_114489_4_19_16.txt` |
 | CA(N; 4, 21, 18) | 188415 | Bai XunDi (doi:10.5281/zenodo.23787055): degree-2 polynomial construction (poly2) with a pencil cover of AG(2,q), CA(188426; 4, 21, 18); then dedupe + optimal hitting-set pruning (CP-SAT) of CA(188426; 4, 21, 18) (R=10 redundant rows) | **188412** | `arrays/CA_188412_4_21_18.txt` |
 | CA(N; 4, 40, 18) | 260621 | Bai XunDi (doi:10.5281/zenodo.23787055): Sherwood CPHF(2;k,q,4) (Singer-cycle seeds + tabu column extension), CPHF->CA expansion; symbol fusion of the own array CA(260623; 4, 40, 19) (1 step, 2 rows removed) | **260585** | `arrays/CA_260585_4_40_18.txt` |
+| CA(N; 4, 48, 20) | 559653 | Bai XunDi (doi:10.5281/zenodo.23787055): cyclic / structured CPHF (2 rows) -> CA expansion; then symbol fusion CKRS 2010 Lemma 3.1, CAN(t,k,v-1) <= CAN(t,k,v) - 2, 3 steps | **559529** | `arrays/CA_559529_4_48_20.txt` |
+| CA(N; 4, 48, 21) | 559655 | Bai XunDi (doi:10.5281/zenodo.23787055): cyclic / structured CPHF (2 rows) -> CA expansion; then symbol fusion CKRS 2010 Lemma 3.1, CAN(t,k,v-1) <= CAN(t,k,v) - 2, 2 steps | **559570** | `arrays/CA_559570_4_48_21.txt` |
+| CA(N; 4, 48, 22) | 559657 | symbol fusion CKRS 2010 Lemma 3.1 (ca-tools derived entry) of the table's CA(559659; 4, 48, 23): two-row Sherwood CPHF(2; 2q+2, q, 4) from the Singer cycle of PG(3,q) (Bai XunDi, doi:10.5281/zenodo.23787053, Theorem 3.2 and Corollary 5.6), q = 23; affine Sherwood-Martirosyan-Colbourn expansion | **559613** | `arrays/CA_559613_4_48_22.txt` |
 | CA(N; 5, 13, 4) | 2669 | Bai XunDi (doi:10.5281/zenodo.23787055): near-CPHF(2) + aligned linear residual block | **2595** | `arrays/CA_2595_5_13_4.txt` |
 | CA(N; 5, 14, 5) | 8575 | Bai XunDi (doi:10.5281/zenodo.23787055): near-CPHF(2) + aligned linear residual block | **8353** | `arrays/CA_8353_5_14_5.txt` |
 | CA(N; 5, 13, 6) | 28399 | Bai XunDi (doi:10.5281/zenodo.23787055): Sherwood CPHF -> CA, symbol fusion, wildcard row-deletion post-optimisation (table entry k = 15) | **27222** | `arrays/CA_27222_5_13_6.txt` |
 | CA(N; 5, 14, 6) | 28399 | Bai XunDi (doi:10.5281/zenodo.23787055): Sherwood CPHF -> CA, symbol fusion, wildcard row-deletion post-optimisation (table entry k = 15) | **28082** | `arrays/CA_28082_5_14_6.txt` |
-| CA(N; 5, 16, 6) | 30682 | Bai XunDi (doi:10.5281/zenodo.23787055): Sherwood CPHF -> CA, symbol fusion, wildcard row-deletion post-optimisation | **30386** | `arrays/CA_30386_5_16_6.txt` |
-| CA(N; 5, 21, 6) | 43531 | Density Cyclic (Colbourn) postop NCK | **42655** | `arrays/CA_42655_5_21_6.txt` |
+| CA(N; 5, 16, 6) | 30682 | Bai XunDi (doi:10.5281/zenodo.23787055): Sherwood CPHF -> CA, symbol fusion, wildcard row-deletion post-optimisation | **30264** | `arrays/CA_30264_5_16_6.txt` |
+| CA(N; 5, 21, 6) | 43531 | Density Cyclic (Colbourn) postop NCK | **42436** | `arrays/CA_42436_5_21_6.txt` |
 | CA(N; 5, 22, 6) | 43663 | Bai XunDi (doi:10.5281/zenodo.23787055): Sherwood CPHF -> CA, symbol fusion, wildcard row-deletion post-optimisation | **43440** | `arrays/CA_43440_5_22_6.txt` |
-| CA(N; 5, 23, 6) | 44320 | Bai XunDi (doi:10.5281/zenodo.23787055): Sherwood CPHF -> CA, symbol fusion, wildcard row-deletion post-optimisation | **44281** | `arrays/CA_44281_5_23_6.txt` |
+| CA(N; 5, 23, 6) | 44320 | Bai XunDi (doi:10.5281/zenodo.23787055): Sherwood CPHF -> CA, symbol fusion, wildcard row-deletion post-optimisation | **44155** | `arrays/CA_44155_5_23_6.txt` |
 | CA(N; 5, 10, 8) | 49136 | Bai XunDi (doi:10.5281/zenodo.23787055): degree-2 polynomial construction + block cover / SA post-processing; then 16 redundant rows of CA(49152; 5, 10, 8) deleted | **49128** | `arrays/CA_49128_5_10_8.txt` |
-| CA(N; 5, 13, 10) | 226208 | Bai XunDi (doi:10.5281/zenodo.23787055): degree-2 polynomial construction (poly2) with a pencil cover of AG(2,q), CA(226262; 5, 13, 10); then dedupe + optimal hitting-set pruning (CP-SAT) of CA(226262; 5, 13, 10) (R=53 redundant rows) | **225184** | `arrays/CA_225184_5_13_10.txt` |
+| CA(N; 5, 13, 10) | 226208 | Bai XunDi (doi:10.5281/zenodo.23787055): degree-2 polynomial construction (poly2) with a pencil cover of AG(2,q), CA(226262; 5, 13, 10); then dedupe + optimal hitting-set pruning (CP-SAT) of CA(226262; 5, 13, 10) (R=53 redundant rows) | **224844** | `arrays/CA_224844_5_13_10.txt` |
 | CA(N; 5, 15, 10) | 307433 | Bai XunDi (doi:10.5281/zenodo.23787055): elliptic two-block array, CAN(t,#E(F_q),q) <= 2q^t - q^(t-1), q=11; then symbol fusion CKRS 2010 Lemma 3.1 (Colbourn, Keri, Rivas Soriano, Schlage-Puchta), CAN(t,k,v-1) <= CAN(t,k,v) - 2, 1 step(s); t (table entry k = 18) | **306455** | `arrays/CA_306455_5_15_10.txt` |
 | CA(N; 5, 16, 10) | 307433 | Bai XunDi (doi:10.5281/zenodo.23787055): elliptic two-block array, CAN(t,#E(F_q),q) <= 2q^t - q^(t-1), q=11; then symbol fusion CKRS 2010 Lemma 3.1 (Colbourn, Keri, Rivas Soriano, Schlage-Puchta), CAN(t,k,v-1) <= CAN(t,k,v) - 2, 1 step(s); t (table entry k = 18) | **307024** | `arrays/CA_307024_5_16_10.txt` |
 | CA(N; 5, 17, 10) | 307433 | Bai XunDi (doi:10.5281/zenodo.23787055): elliptic two-block array, CAN(t,#E(F_q),q) <= 2q^t - q^(t-1), q=11; then symbol fusion CKRS 2010 Lemma 3.1 (Colbourn, Keri, Rivas Soriano, Schlage-Puchta), CAN(t,k,v-1) <= CAN(t,k,v) - 2, 1 step(s); t (table entry k = 18) | **307215** | `arrays/CA_307215_5_17_10.txt` |
@@ -157,6 +166,10 @@ search (see Method). CA(1050; 4, 8, 5), CA(3942; 4, 12, 6) and CA(3240; 4, 12, 6
 are kept and superseded by CA(1006; 4, 8, 5) and CA(3216; 4, 12, 6). CA(2736; 4, 10, 6),
 CA(6581; 4, 27, 6) and CA(3568; 4, 9, 7) are kept and superseded by the arrays of
 version 1.5.
+
+Version 1.10 replaces earlier arrays of ours for eight parameter sets: CA(N; 3, 32, 5),
+CA(N; 3, 58, 7), CA(N; 4, 29, 10), CA(N; 4, 31, 12), CA(N; 5, 13, 10), CA(N; 5, 16, 6),
+CA(N; 5, 21, 6) and CA(N; 5, 23, 6); the earlier files stay in `arrays/`.
 
 Version 1.9 replaces earlier arrays of ours for 41 parameter sets: CA(N; 3, 15, 12),
 CA(N; 3, 19, 14), CA(N; 3, 19, 15), CA(N; 3, 21, 18), CA(N; 3, 34, 3), CA(N; 4, 16, 6),
@@ -186,7 +199,9 @@ We missed it when we first claimed them. Its smaller arrays pass both of
 our checkers. Our files stay here for reproducibility and are no longer claimed
 as improvements. CA(416; 3, 11, 6) of version 1.8 is overtaken by CA(411; 3, 11, 6)
 of Kevin Grey in the ca-tools table (doi:10.5281/zenodo.24096230, built from his
-CA(418; 3, 11, 6)).
+CA(418; 3, 11, 6)). Our CA(126935; 4, 25, 14) is overtaken by the derived entry
+CA(126929; 4, 25, 14) of the table, obtained by symbol fusion (CKRS 2010, Lemma 3.1)
+from our CA(126931; 4, 25, 15).
 Two more were overtaken by the deposit of Bai XunDi until version 1.5:
 its CA(6568; 4, 27, 6) and CA(3557; 4, 9, 7) are now above our CA(6559; 4, 27, 6)
 and CA(3556; 4, 9, 7).
@@ -212,6 +227,41 @@ Every array here was checked by `ca_verify` and by a second,
 independently written checker.
 
 ## Method
+
+### Version 1.10
+
+Checked on 2026-11-13, after the table of ca-tools at commit 69c708e was read
+again: the 11 files added in this version pass `ca_verify` of ca-tools, the second
+checker and a negative control (the array with one run removed is rejected).
+The three post-optimised arrays CA(N; 4, 48, v), v = 20, 21, 22, each had one
+redundant run, their first; the files here are those arrays without it, and they
+pass all three checks themselves.
+
+**Search programs written by Claude Opus (2 arrays).** CA(291; 3, 32, 5) and
+CA(884; 3, 58, 7) come from programs written by Claude Opus in the automated search
+loop (delete a run and repair, as in version 1.9). They are in `generators/v1.10/`,
+named after the array they produced, and ran with no LLM at run time. Each reads its
+starting array from the environment variable `BEST_CANDIDATE`: the smallest array the
+lab held for that size, our CA(323; 3, 32, 5) and CA(929; 3, 58, 7) of earlier versions.
+
+**Post-optimisation (9 arrays).** `generators/postop.c`, with no LLM at run time, as
+in versions 1.8 and 1.9. The chains start from:
+- our earlier entries CA(36615; 4, 29, 10), CA(78458; 4, 31, 12), CA(225184; 5, 13, 10),
+  CA(30386; 5, 16, 6), CA(42655; 5, 21, 6) and CA(44281; 5, 23, 6), which descend from
+  the record arrays of Bai XunDi (doi:10.5281/zenodo.23787055) (for CA(N; 5, 21, 6), his
+  CA(43663; 5, 22, 6) with one column deleted);
+- the arrays CA(559653; 4, 48, 20) and CA(559655; 4, 48, 21) of Bai XunDi
+  (doi:10.5281/zenodo.23787055) for v = 20 and 21;
+- for CA(N; 4, 48, 22), the table's CA(559659; 4, 48, 23) (two-row Sherwood CPHF from
+  the Singer cycle of PG(3, 23), Bai XunDi, doi:10.5281/zenodo.23787053), fused to
+  22 symbols (CKRS 2010, Lemma 3.1).
+The gains on CA(N; 4, 48, v) are small (0.022 %, 0.015 % and 0.008 % for v = 20, 21 and 22);
+we list these values as improved sizes only.
+
+Prior art for the 11, checked on 2026-11-13: the ca-tools table at commit 69c708e with
+stair-step, symbol fusion and derived entries, its open pull requests, the database of
+Dwyer (`aadwyer/CA_Database`), and the Zenodo, GitHub and arXiv records matching
+"covering array" or "covering perfect hash family". None gives a size at or below ours.
 
 ### Version 1.9
 

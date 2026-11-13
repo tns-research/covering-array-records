@@ -10,8 +10,8 @@ authors:
 license: CC-BY-4.0
 doi: "10.5281/zenodo.23741408"
 repository-code: "https://github.com/tns-research/covering-array-records"
-version: "1.9"
-date-released: "2026-11-11"
+version: "1.10"
+date-released: "2026-11-13"
 keywords:
   - covering arrays
   - combinatorial designs
@@ -20,4 +20,4 @@ keywords:
   - linear codes
   - group actions
   - LLM-written search programs
-abstract: "Explicit covering arrays for 106 parameter sets of the ca-tools covering array table, at strengths 3 to 6; 102 of them hold the best known size on 2026-11-11, including CA(6442; 4, 37, 6) (previous best 7199), CA(6871; 4, 38, 6) (7812), CA(3516; 4, 14, 6) (4080), CA(2976; 4, 12, 6) (3944), CA(36615; 4, 29, 10) (41007) and the line CA(N; 4, k, 6) for k = 11 to 39. Obtained by orbit search under PGL(2, q), a family developed under PGL(2, 5) and a cyclic shift of the columns, unions of cosets of linear codes and post-optimisation of the published record arrays, with search programs written by Claude Opus, and verified exhaustively."
+abstract: "Explicit covering arrays for 109 parameter sets of the ca-tools covering array table, at strengths 3 to 6; 104 of them hold the best known size on 2026-11-13, including CA(6442; 4, 37, 6) (previous best 7199), CA(6871; 4, 38, 6) (7812), CA(3516; 4, 14, 6) (4080), CA(2976; 4, 12, 6) (3944), CA(36435; 4, 29, 10) (41007), CA(291; 3, 32, 5) (324) and the line CA(N; 4, k, 6) for k = 11 to 39. Obtained by orbit search under PGL(2, q), a family developed under PGL(2, 5) and a cyclic shift of the columns, unions of cosets of linear codes and post-optimisation of the published record arrays, with search programs written by Claude Opus, and verified exhaustively."
